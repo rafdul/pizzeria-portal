@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './TablesBookingNew.module.scss';
+import styles from './BookingNew.module.scss';
 
-const TablesBookingNew = () => (
+const BookingNew = () => (
 
   <div className={styles.component}>
     <h2>New booking of table view</h2>
@@ -9,4 +9,4 @@ const TablesBookingNew = () => (
 
 );
 
-export default TablesBookingNew;
+export default BookingNew;
