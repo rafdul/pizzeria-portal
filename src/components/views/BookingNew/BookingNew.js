@@ -11,7 +11,7 @@ import styles from './BookingNew.module.scss';
 
 const BookingNew = () => (
 
-  <Container component="main" maxWidth="xs">
+  <Container component='main' maxWidth='xs'>
     <CssBaseline />
     <Paper className={styles.paper}>
       <p className={styles.title}>Add new booking</p>
@@ -32,59 +32,49 @@ const BookingNew = () => (
         <FormControlLabel control={<Checkbox color='primary' name='table2' />} label='Table 2' />
         <FormControlLabel control={<Checkbox color='primary' name='table3' />} label='Table 3' />
       </div>
-      {/* <TextField
-        variant="outlined"
-        margin="normal"
+      <TextField
+        variant='outlined'
+        margin='normal'
         required
         fullWidth
-        id="table"
-        label="Choose table"
-        name="table"
-        autoFocus
-      /> */}
+        id='firstName'
+        label='First Name'
+        name='firstName'
+        type='text'
+      />
       <TextField
-        variant="outlined"
-        margin="normal"
+        variant='outlined'
+        margin='normal'
+        fullWidth
+        id='lastName'
+        label='Last Name'
+        name='lastName'
+        type='text'
+      />
+      <TextField
+        variant='outlined'
+        margin='normal'
         required
         fullWidth
-        id="firstName"
-        label="First Name"
-        name="firstName"
-        type="text"
+        id='tel'
+        label='Tel'
+        name='tel'
+        type='tel'
       />
       <TextField
-        variant="outlined"
-        margin="normal"
+        variant='outlined'
+        margin='normal'
         fullWidth
-        id="lastName"
-        label="Last Name"
-        name="lastName"
-        type="text"
-      />
-      <TextField
-        variant="outlined"
-        margin="normal"
-        required
-        fullWidth
-        id="tel"
-        label="Tel"
-        name="tel"
-        type="tel"
-      />
-      <TextField
-        variant="outlined"
-        margin="normal"
-        fullWidth
-        id="email"
-        label="Email"
-        name="email"
-        type="email"
+        id='email'
+        label='Email'
+        name='email'
+        type='email'
       />
       <div className={styles.button}>
         <Button
-          variant="contained"
-          color="primary"
-          size="large"
+          variant='contained'
+          color='primary'
+          size='large'
         >
           Save new booking
         </Button>
