@@ -1,5 +1,29 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/views.scss';
+
 
 .component {
   padding: $base-size;
+}
+
+.datepicker {
+  // display: 'flex';
+  // flex-wrap: 'wrap';
+  padding: 16px 8px;
+  text-align: center;
+}
+
+.checkbox {
+  text-align: center;
+  padding: 16px 8px;
+  border: 1px solid rgba(133, 133, 133, 0.87);
+  border-radius: 5px;
+}
+
+.subtitle {
+  margin: 8px 0;
+}
+
+.button {
+  text-align: center;
 }
