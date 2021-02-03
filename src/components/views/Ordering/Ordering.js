@@ -85,7 +85,7 @@ const Ordering = ({orderId = '123abc'}) => (
                 </TableCell>
                 <TableCell>
                   {row.order && (
-                    <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
+                    <Button component={Link} to={`${process.env.PUBLIC_URL}/ordering/order/${row.order}`}>
                       {row.order}
                     </Button>
                   )}
