@@ -109,7 +109,7 @@ const Homepage = () => (
     </Grid>
     <Grid container component='div' justify='space-between' spacing={2}>
       <Grid item xs={12} sm={6}  className={styles.box}>
-        <Paper className={styles.paper}>
+        <Paper className={styles.paper} elevation={6}>
           <p className={styles.title}>All orders</p>
           <TableContainer className={styles.container}>
             <Table stickyHeader>
@@ -134,7 +134,7 @@ const Homepage = () => (
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6}  className={styles.box}>
-        <Paper className={styles.paper}>
+        <Paper className={styles.paper} elevation={6}>
           <p className={styles.title}>All events</p>
           <TableContainer className={styles.container}>
             <Table stickyHeader>
@@ -159,7 +159,7 @@ const Homepage = () => (
         </Paper>
       </Grid>
       <Grid item xs={12}  className={styles.box}>
-        <Paper className={styles.paper} align='center'>
+        <Paper className={styles.paper} align='center' elevation={6}>
           <p className={styles.title}>All bookings</p>
           <div className={styles.booking}>
             <DataGrid

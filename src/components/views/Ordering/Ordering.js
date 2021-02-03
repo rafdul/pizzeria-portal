@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Table from '@material-ui/core/Table';
-import TableContainer from '@material-ui/core/TableContainer';
+// import TableContainer from '@material-ui/core/TableContainer';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
@@ -29,12 +29,12 @@ const renderActions = status => {
       return (
         <>
           <Button>thinking</Button>
-          <Button>new order</Button>
+          <Button component={Link} to={`${process.env.PUBLIC_URL}/ordering/new`} variant='outlined' color='secondary'>new order</Button>
         </>
       );
     case 'thinking':
       return (
-        <Button>new order</Button>
+        <Button component={Link} to={`${process.env.PUBLIC_URL}/ordering/new`} variant='outlined' color='secondary'>new order</Button>
       );
     case 'ordered':
       return (
@@ -62,7 +62,7 @@ const Ordering = ({orderId = '123abc'}) => (
   <Grid container component='div' className={styles.component}>
     <CssBaseline />
     <Grid item xs={12} className={styles.box}>
-      <Paper className={styles.paper}>
+      <Paper className={styles.paper} elevation={6}>
         <p className={styles.title}>Orders - view for waiter</p>
 
         <Table stickyHeader>

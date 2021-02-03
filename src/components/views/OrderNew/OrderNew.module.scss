@@ -1,5 +1,36 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/views.scss';
+
 
 .component {
   padding: $base-size;
+}
+
+.gridBox {
+  padding: 16px 8px;
+}
+
+.textField {
+  max-width: 200px;
+  // text-align: center;
+}
+
+.formBox {
+  min-width: 170px;
+  margin: 0 16px;
+}
+
+.border {
+  padding: 16px 8px;
+  margin: 8px 0;
+  border: 1px solid rgba(133, 133, 133, 0.87);
+  border-radius: 5px;
+}
+
+.checkbox {
+  padding: 4px 8px;
+}
+
+.button {
+  margin: auto;
 }

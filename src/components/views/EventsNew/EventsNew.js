@@ -31,11 +31,26 @@ const EventsNew = () => (
             }}
             className={styles.date}
           />
+        </form>
+        <form className={styles.datepicker} noValidate>
           <TextField
             id='time-start-event'
-            label='Time start event'
+            label='Time from'
             type='time'
-            defaultValue='07:30'
+            defaultValue='12:30'
+            InputLabelProps={{
+              shrink: true,
+            }}
+            inputProps={{
+              step: 1800, // 30 min
+            }}
+            className={styles.date}
+          />
+          <TextField
+            id='time-end-event'
+            label='Time to'
+            type='time'
+            defaultValue='14:30'
             InputLabelProps={{
               shrink: true,
             }}
@@ -53,19 +68,6 @@ const EventsNew = () => (
             defaultValue= '2021-01-29'
             InputLabelProps={{
               shrink: true,
-            }}
-            className={styles.date}
-          />
-          <TextField
-            id='time-end-event'
-            label='Time end event'
-            type='time'
-            defaultValue='07:30'
-            InputLabelProps={{
-              shrink: true,
-            }}
-            inputProps={{
-              step: 1800, // 30 min
             }}
             className={styles.date}
           />

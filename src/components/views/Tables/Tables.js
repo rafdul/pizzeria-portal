@@ -53,7 +53,7 @@ const Tables = ({bookingId = 'BOK45er', eventId ='EV89zz'}) => (
   <Grid container component='div' className={styles.component} justify='space-between' spacing={2}>
     <CssBaseline />
     <Grid item xs={12} className={styles.box}>
-      <Paper className={styles.paper}>
+      <Paper className={styles.paper} elevation={6}>
         <Grid container component='div' className={styles.component} >
           <Grid item xs={12} sm={7} className={styles.tableBox}>
             <form className={styles.datepicker} noValidate>
@@ -102,7 +102,7 @@ const Tables = ({bookingId = 'BOK45er', eventId ='EV89zz'}) => (
     </Grid>
 
     <Grid item xs={12} className={styles.box}>
-      <Paper className={styles.paper}>
+      <Paper className={styles.paper} elevation={6}>
         <p className={styles.title}>All orders</p>
         <TableContainer className={styles.container}>
           <Table stickyHeader>
