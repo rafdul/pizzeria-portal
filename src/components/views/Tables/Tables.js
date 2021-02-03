@@ -71,18 +71,30 @@ const Tables = ({bookingId = 'BOK45er', eventId ='EV89zz'}) => (
           </Grid>
           <Grid item xs={12} sm={5} className={styles.tableBox}>
             <div className={styles.button}>
-              <Link to={`${process.env.PUBLIC_URL}/tables/booking/new`} className={styles.link}>
-                <Button variant="contained" color="primary" size="large" startIcon={<AddOutlinedIcon />} className={styles.buttonTable}>
+              <Button
+                component={Link}
+                to={`${process.env.PUBLIC_URL}/tables/booking/new`}
+                variant="contained"
+                color="primary"
+                size="large"
+                startIcon={<AddOutlinedIcon />}
+                className={styles.buttonTable}
+              >
                   Add new booking
-                </Button>
-              </Link>
+              </Button>
             </div>
             <div className={styles.button}>
-              <Link to={`${process.env.PUBLIC_URL}/tables/events/new`} className={styles.link}>
-                <Button variant="outlined" color="secondary" size="large" startIcon={<AddIcon />} className={styles.buttonTable}>
-                  Add new event
-                </Button>
-              </Link>
+              <Button
+                component={Link}
+                to={`${process.env.PUBLIC_URL}/tables/events/new`}
+                variant="outlined"
+                color="secondary"
+                size="large"
+                startIcon={<AddIcon />}
+                className={styles.buttonTable}
+              >
+                Add new event
+              </Button>
             </div>
           </Grid>
         </Grid>
@@ -108,11 +120,11 @@ const Tables = ({bookingId = 'BOK45er', eventId ='EV89zz'}) => (
               {rowsTables.map( row => (
                 <TableRow key={row.number}>
                   <TableCell component='th' scope='row'>{row.number}</TableCell>
-                  <TableCell component='th' scope='row'>{row.time}</TableCell>
-                  <TableCell component='th' scope='row'>{row.table1}</TableCell>
-                  <TableCell component='th' scope='row'>{row.table2}</TableCell>
-                  <TableCell component='th' scope='row'>{row.table3}</TableCell>
-                  <TableCell component='th' scope='row'>{row.event}</TableCell>
+                  <TableCell component='td' scope='row'>{row.time}</TableCell>
+                  <TableCell component='td' scope='row'>{row.table1}</TableCell>
+                  <TableCell component='td' scope='row'>{row.table2}</TableCell>
+                  <TableCell component='td' scope='row'>{row.table3}</TableCell>
+                  <TableCell component='td' scope='row'>{row.event}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

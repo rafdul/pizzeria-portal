@@ -124,8 +124,8 @@ const Homepage = () => (
                 {rowsOrders.map( row => (
                   <TableRow key={row.name}>
                     <TableCell component='th' scope='row'>{row.name}</TableCell>
-                    <TableCell component='th' scope='row'>{row.takeAway}</TableCell>
-                    <TableCell component='th' scope='row'>{row.local}</TableCell>
+                    <TableCell component='td' scope='row'>{row.takeAway}</TableCell>
+                    <TableCell component='td' scope='row'>{row.local}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -149,8 +149,8 @@ const Homepage = () => (
                 {rowsEvents.map( row => (
                   <TableRow key={row.number}>
                     <TableCell component='th' scope='row'>{row.number}</TableCell>
-                    <TableCell component='th' scope='row'>{row.time}</TableCell>
-                    <TableCell component='th' scope='row'>{row.tables}</TableCell>
+                    <TableCell component='td' scope='row'>{row.time}</TableCell>
+                    <TableCell component='td' scope='row'>{row.tables}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
