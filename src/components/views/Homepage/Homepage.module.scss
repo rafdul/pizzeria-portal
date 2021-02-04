@@ -8,7 +8,20 @@
 }
 
 .booking {
-  min-height: 450px;
+  margin: 0 auto;
+  max-height: 650px;
   width: 85%;
   text-align: center;
+}
+
+.pagination {
+  display: flex;
+}
+
+.tableFooter {
+  margin: 0 auto;
+}
+
+.borderFooter {
+  border: none;
 }
