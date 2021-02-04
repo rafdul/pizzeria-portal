@@ -32,7 +32,7 @@ const OrderDetails = (props) => (
                 primary={
                   <div>
                     <Typography variant='body1' component='span'>Doughnut</Typography>
-                    <Typography variant='body2' component='span' color='secondary'> 1 pc.</Typography>
+                    <Typography variant='body1' component='span' color='secondary'> 1 pc.</Typography>
                   </div>
                 }
               />
@@ -42,7 +42,7 @@ const OrderDetails = (props) => (
                 primary={
                   <div>
                     <Typography variant='body1' component='span'>Caffee Espresso</Typography>
-                    <Typography variant='body2' component='span' color='secondary'> 2 pc.</Typography>
+                    <Typography variant='body1' component='span' color='secondary'> 2 pc.</Typography>
                   </div>
                 }
               />
@@ -52,8 +52,20 @@ const OrderDetails = (props) => (
                 primary={
                   <div>
                     <Typography variant='body1' component='span'>Pizza</Typography>
-                    <Typography variant='body2' component='span' color='secondary'> 1 pc.</Typography>
-                    <ListItem>
+                    <Typography variant='body1' component='span' color='secondary'> 1 pc.</Typography>
+                    <div className={styles.list}>
+                      <Typography variant='body2' component='span'>Souce: </Typography>
+                      <Typography variant='body2' component='span' color='textSecondary'>tomato</Typography>
+                    </div>
+                    <div className={styles.list}>
+                      <Typography variant='body2' component='span'>Crust: </Typography>
+                      <Typography variant='body2' component='span' color='textSecondary'>wholewheat</Typography>
+                    </div>
+                    <div className={styles.list}>
+                      <Typography variant='body2' component='span'>Toppings: </Typography>
+                      <Typography variant='body2' component='span' color='textSecondary'>olives, green pepper, mushromms, basil, salami</Typography>
+                    </div>
+                    {/* <ListItem>
                       <ListItemText
                         primary={<Typography variant='body1' component='span'>Souce: </Typography>}
                         secondary={<Typography variant='body2' component='span' color='textSecondary'>tomato</Typography>}
@@ -70,7 +82,7 @@ const OrderDetails = (props) => (
                         primary={<Typography variant='body1' component='span'>Toppings: </Typography>}
                         secondary={<Typography variant='body2' component='span' color='textSecondary'>olives, green pepper, mushromms, basil, salami</Typography>}
                       />
-                    </ListItem>
+                    </ListItem> */}
                   </div>
                 }
               />
@@ -80,13 +92,17 @@ const OrderDetails = (props) => (
                 primary={
                   <div>
                     <Typography variant='body1' component='span'>Salad</Typography>
-                    <Typography variant='body2' component='span' color='secondary'> 3 pc.</Typography>
-                    <ListItem>
+                    <Typography variant='body1' component='span' color='secondary'> 3 pc.</Typography>
+                    <div className={styles.list}>
+                      <Typography variant='body1' component='span'>Ingredients: </Typography>
+                      <Typography variant='body2' component='span' color='textSecondary'>cucumber, tomatoes, feta, cheese, herbs, black pepper</Typography>
+                    </div>
+                    {/* <ListItem>
                       <ListItemText
                         primary={<Typography variant='body1' component='span'>Ingredients: </Typography>}
                         secondary={<Typography variant='body2' component='span' color='textSecondary'>cucumber, tomatoes, feta, cheese, herbs, black pepper</Typography>}
                       />
-                    </ListItem>
+                    </ListItem> */}
                   </div>
                 }
               />
@@ -102,11 +118,11 @@ const OrderDetails = (props) => (
                   <div>
                     <div>
                       <Typography variant='body1' component='span'>Local or take-a-way: </Typography>
-                      <Typography variant='body2' component='span' color='secondary'>local</Typography>
+                      <Typography variant='body1' component='span' color='secondary'>local</Typography>
                     </div>
                     <div>
                       <Typography variant='body1' component='span'>Table: </Typography>
-                      <Typography variant='body2' component='span' color='secondary'>table3</Typography>
+                      <Typography variant='body1' component='span' color='secondary'>table3</Typography>
                     </div>
                   </div>
                 }

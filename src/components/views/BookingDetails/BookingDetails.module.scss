@@ -1,5 +1,20 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/views.scss';
+
 
 .component {
-  padding: $base-size;
+  // flex-grow: 1;
+  margin: 14px auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.bookingID {
+  padding-left: 8px;
+}
+
+.listText {
+  padding: 12px 0;
 }
