@@ -18,8 +18,8 @@ const OrderDetails = (props) => (
       <Paper className={styles.paper} elevation={6}>
         <Typography variant="h5" className={styles.title}>
           Order Details id:
-          <Typography variant="h4" component='span' color='secondary'>
-            {props.match.params.id}
+          <Typography variant="h4" component='span' color='secondary' className={styles.orderID}>
+            { props.match.params.id}
           </Typography>
         </Typography>
         <Grid container >
@@ -140,7 +140,7 @@ const OrderDetails = (props) => (
                 primary={
                   <div>
                     <Typography variant='body1' component='span'>Summary price: </Typography>
-                    <Typography variant='body2' component='span' color='secondary'>$33,25</Typography>
+                    <Typography variant='subtitle1' component='span' color='secondary'>$33,25</Typography>
                   </div>
                 }
               />

@@ -97,15 +97,6 @@ const Ordering = ({orderId = '123abc'}) => (
             ))}
           </TableBody>
         </Table>
-
-        <div className={styles.component}>
-          <h2>Ordering view</h2>
-          <div>
-            <Link to={`${process.env.PUBLIC_URL}/ordering/new`} className={styles.link}>Order new</Link>
-            <Link to={`${process.env.PUBLIC_URL}/ordering/order/${orderId}`} className={styles.link}>Order {orderId}</Link>
-          </div>
-        </div>
-
       </Paper>
     </Grid>
   </Grid>

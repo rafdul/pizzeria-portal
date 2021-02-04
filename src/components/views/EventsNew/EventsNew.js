@@ -18,7 +18,7 @@ const EventsNew = () => (
   <Container component='main' maxWidth='xs'>
     <CssBaseline />
     <Paper className={styles.paper}>
-      <p className={styles.title}>Add new booking</p>
+      <p className={styles.title}>Add new event</p>
       <div className={styles.dateContainer}>
         <form className={styles.datepicker} noValidate>
           <TextField
