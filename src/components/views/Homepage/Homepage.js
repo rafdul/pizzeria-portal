@@ -108,7 +108,7 @@ function TablePaginationActions(props) {
   };
 
   return (
-    <div>
+    <div className={styles.flexShrink}>
       <IconButton
         onClick={handleFirstPageButtonClick}
         disabled={page === 0}
@@ -278,10 +278,31 @@ const Homepage = () => {
                     </TableRow>
                   ))}
                 </TableBody>
+                <TableFooter>
+                  <TableRow>
+                    <TablePagination
+                      rowsPerPageOptions={[5, 10, 20, 24]}
+                      count={rowsTables.length}
+                      rowsPerPage={rowsPerPage}
+                      page={page}
+                      SelectProps={{
+                        inputProps: { 'aria-label': 'rows per page' },
+                        native: true,
+                      }}
+                      colSpan={5}
+                      onChangePage={handleChangePage}
+                      onChangeRowsPerPage={handleChangeRowsPerPage}
+                      ActionsComponent={TablePaginationActions}
+                      className={styles.borderFooter}
+                    />
+                  </TableRow>
+                </TableFooter>
               </Table>
             </TableContainer>
-            <div className={styles.pagination}>
-              <TableFooter className={styles.tableFooter}>
+            {/* <div className={styles.pagination}> */}
+
+
+            {/* <TableFooter component='div' className={styles.tableFooter}>
                 <TableRow>
                   <TablePagination
                     rowsPerPageOptions={[5, 10, 20, 24]}
@@ -298,8 +319,8 @@ const Homepage = () => {
                     className={styles.borderFooter}
                   />
                 </TableRow>
-              </TableFooter>
-            </div>
+              </TableFooter> */}
+            {/* </div> */}
           </Paper>
         </Grid>
       </Grid>
