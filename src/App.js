@@ -11,7 +11,7 @@ import BookingDetails from './components/views/BookingDetails/BookingDetails';
 import BookingNew from './components/views/BookingNew/BookingNew';
 import EventsDetails from './components/views/EventsDetails/EventsDetails';
 import EventsNew from './components/views/EventsNew/EventsNew';
-import Ordering from './components/views/Ordering/Ordering';
+import Ordering from './components/views/Ordering/OrderingContainer';
 import OrderNew from './components/views/OrderNew/OrderNew';
 import OrderDetails from './components/views/OrderDetails/OrderDetails';
 import Kitchen from './components/views/Kitchen/Kitchen';
