@@ -23,39 +23,6 @@ import styles from './Ordering.module.scss';
 //   {id: '6', status: 'paid', order: 456},
 // ];
 
-// const renderActions = status => {
-//   switch (status) {
-//     case 'free':
-//       return (
-//         <>
-//           <Button>thinking</Button>
-//           <Button component={Link} to={`${process.env.PUBLIC_URL}/ordering/new`} variant='outlined' color='secondary'>new order</Button>
-//         </>
-//       );
-//     case 'thinking':
-//       return (
-//         <Button component={Link} to={`${process.env.PUBLIC_URL}/ordering/new`} variant='outlined' color='secondary'>new order</Button>
-//       );
-//     case 'ordered':
-//       return (
-//         <Button>prepared</Button>
-//       );
-//     case 'prepared':
-//       return (
-//         <Button>delivered</Button>
-//       );
-//     case 'delivered':
-//       return (
-//         <Button>paid</Button>
-//       );
-//     case 'paid':
-//       return (
-//         <Button>free</Button>
-//       );
-//     default:
-//       return null;
-//   }
-// };
 
 class Ordering extends React.Component {
   static propTypes = {
@@ -64,7 +31,12 @@ class Ordering extends React.Component {
       active: PropTypes.bool,
       error: PropTypes.oneOfType([PropTypes.bool,PropTypes.string]),
     }),
-    tables: PropTypes.object,
+    // tables: PropTypes.array,
+    tables: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.array,
+    ]),
+    fetchChangeStatus: PropTypes.func,
   }
 
   componentDidMount(){
@@ -72,34 +44,37 @@ class Ordering extends React.Component {
     fetchTables();
   }
 
-  renderActions(status){
+  renderActions(id, status){
+
+    const { fetchChangeStatus } = this.props;
+
     switch (status) {
       case 'free':
         return (
           <>
-            <Button>thinking</Button>
-            <Button>new order</Button>
+            <Button onClick={() => fetchChangeStatus(id, 'thinking')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/new`}>thinking</Button>
+            <Button onClick={() => fetchChangeStatus(id, 'ordered')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/new`} variant='outlined' color='secondary'>new order</Button>
           </>
         );
       case 'thinking':
         return (
-          <Button>new order</Button>
+          <Button onClick={() => fetchChangeStatus(id, 'ordered')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/new`} variant='outlined' color='secondary'>new order</Button>
         );
       case 'ordered':
         return (
-          <Button>prepared</Button>
+          <Button onClick={() => fetchChangeStatus(id, 'prepared')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/order/999`}>prepared</Button>
         );
       case 'prepared':
         return (
-          <Button>delivered</Button>
+          <Button onClick={() => fetchChangeStatus(id, 'delivered')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/order/999`}>delivered</Button>
         );
       case 'delivered':
         return (
-          <Button>paid</Button>
+          <Button onClick={() => fetchChangeStatus(id, 'paid')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/order/999`}>paid</Button>
         );
       case 'paid':
         return (
-          <Button>free</Button>
+          <Button onClick={() => fetchChangeStatus(id, 'free')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/order/999`}>free</Button>
         );
       default:
         return null;
@@ -166,7 +141,7 @@ class Ordering extends React.Component {
                         )}
                       </TableCell>
                       <TableCell>
-                        {this.renderActions(row.status)}
+                        {this.renderActions(row.id, row.status)}
                       </TableCell>
                     </TableRow>
                   ))}
