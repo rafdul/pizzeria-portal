@@ -91,7 +91,7 @@ class Ordering extends React.Component {
           <CssBaseline />
           <Grid item xs={12} className={styles.box}>
             <Paper className={styles.paper} elevation={6}>
-              <p>Loading</p>
+              <p>Loading...</p>
             </Paper>
           </Grid>
         </Grid>

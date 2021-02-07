@@ -14,7 +14,7 @@ import EventsNew from './components/views/EventsNew/EventsNew';
 import Ordering from './components/views/Ordering/OrderingContainer';
 import OrderNew from './components/views/OrderNew/OrderNew';
 import OrderDetails from './components/views/OrderDetails/OrderDetails';
-import Kitchen from './components/views/Kitchen/Kitchen';
+import Kitchen from './components/views/Kitchen/KitchenContainer';
 import { StylesProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';

@@ -202,7 +202,19 @@
       }
     }
   ],
-  "order": [],
+  "order": [
+    {"id": 1, "table": "table2", "orderID": 123, "products": "pizza, coffee, cake"},
+    {"id": 2, "table": "table1", "orderID": 127, "products": "2 x pizza, 2 x coffee, water"},
+    {"id": 3, "table": "table1", "orderID": 143, "products": "pizza, cola"},
+    {"id": 4, "table": "table3", "orderID": 132, "products": "pizza, water, cake"},
+    {"id": 5, "table": "table1", "orderID": 137, "products": "3 x pizza, 3 x tee, 2 x ice-cream"},
+    {"id": 6, "table": "table2", "orderID": 141, "products": "coffee, cake"},
+    {"id": 7, "table": "table3", "orderID": 145, "products": "pizza, coffee, ice-cream"},
+    {"id": 8, "table": "take-a-way", "orderID": 156, "products": "pizza, coffee, cake"},
+    {"id": 9, "table": "take-a-way", "orderID": 159, "products": "pizza, coffee, cake"},
+    {"id": 10, "table": "table2", "orderID": 161, "products": "coffee, cake"},
+    {"id": 11, "table": "take-a-way", "orderID": 166, "products": "pizza, coffee, cake"}
+  ],
   "event": [
     {
       "id": 1,

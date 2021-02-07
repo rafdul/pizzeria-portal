@@ -2,7 +2,9 @@ import {combineReducers, createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import tablesReducer from './tablesRedux';
-import bookedTableReducer from './bookedTable';
+import bookedTableReducer from './bookedTableRedux';
+import orderReducer from './kitchenRedux';
+
 
 // define initial state and shallow-merge initial data
 const initialState = {
@@ -20,12 +22,20 @@ const initialState = {
       error: false,
     },
   },
+  order: {
+    data: {}, //tablica zamówień  z API
+    loading: {
+      active: false,
+      error: false,
+    },
+  },
 };
 
 // define reducers
 const reducers = {
   tables: tablesReducer,
   bookedTable: bookedTableReducer,
+  order: orderReducer,
 };
 
 // add blank reducers for initial state properties without reducers

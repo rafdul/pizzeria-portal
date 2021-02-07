@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Tables from './Tables';
-import { getAll, getLoadingState, fetchFromAPI } from '../../../redux/bookedTable';
+import { getAll, getLoadingState, fetchFromAPI } from '../../../redux/bookedTableRedux';
 
 const mapStateToProps = (state) => ({
   bookedTable: getAll(state),
