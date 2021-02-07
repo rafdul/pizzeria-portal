@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AEEA,AAAA,UAAU,AAAC,CACT,OAAO,CDHG,IAAI,CCIf,AAED,AAAA,IAAI,AAAC,CACH,UAAU,CAAE,IAAI,CACjB,AAED,AAAA,MAAM,AAAC,CACL,OAAO,CAAE,MAAM,CACf,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,GAAG,CACjB,AAED,AAAA,MAAM,AAAC,CACL,OAAO,CAAE,cAAc,CACxB,AAED,AAAA,UAAU,AAAC,CACT,MAAM,CAAE,KAAK,CACb,cAAc,CAAE,IAAI,CACrB,AAED,AAAA,OAAO,AAAC,CACN,OAAO,CAAE,GAAG,CACb,AFvBD,AAAA,UAAU,AAAC,CACT,MAAM,CAAE,SAAS,CAClB,AAED,AAAA,MAAM,AAAC,CACL,UAAU,CAAE,MAAM,CACnB,AAED,AAAA,UAAU,AAAC,CACT,YAAY,CAAE,GAAG,CAClB,AAED,AAAA,SAAS,AAAC,CACR,OAAO,CAAE,MAAM,CAChB",
+    "sources": [
+        "../EventsDetails/EventsDetails.module.scss",
+        "../../../styles/settings.scss",
+        "../../../styles/views.scss",
+        "../../../styles/settings.scss"
+    ],
+    "names": [],
+    "file": "EventsDetails.module.min.css"
+}

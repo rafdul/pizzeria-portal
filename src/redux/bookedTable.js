@@ -2,24 +2,22 @@ import Axios from 'axios';
 import { api } from '../settings';
 
 /* selectors */
-export const getAll = ({tables}) => tables.data;
-export const getLoadingState = ({tables}) => tables.loading;
+export const getAll = ({bookedTable}) => bookedTable.data;
+export const getLoadingState = ({bookedTable}) => bookedTable.loading;
 
 /* action name creator */
-const reducerName = 'tables';
+const reducerName = 'bookedTable';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
 const FETCH_START = createActionName('FETCH_START');
 const FETCH_SUCCESS = createActionName('FETCH_SUCCESS');
 const FETCH_ERROR = createActionName('FETCH_ERROR');
-const FETCH_STATUS = createActionName('FETCH_STATUS');
 
 /* action creators */
 export const fetchStarted = payload => ({ payload, type: FETCH_START });
 export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
-export const fetchStatus = payload => ({ payload, type: FETCH_STATUS });
 
 /* reducer */
 /* thunk creators */
@@ -28,24 +26,11 @@ export const fetchFromAPI = () => {
     dispatch(fetchStarted());
 
     Axios
-      .get(`${api.url}/api/${api.tables}`)
+      .get(`${api.url}/api/${api.bookedTable}`)
       .then(res => {
         dispatch(fetchSuccess(res.data));
-      })
-      .catch(err => {
-        dispatch(fetchError(err.message || true));
-      });
-  };
-};
-
-export const fetchChangeStatus = (tableId, newStatus) => {
-  return (dispatch, getState) => {
-    dispatch(fetchStarted());
-
-    Axios
-      .put(`${api.url}/api/${api.tables}/${tableId}`, {status: newStatus})
-      .then(res => {
-        dispatch(fetchStatus(res.data));
+        // console.log('res.data', res.data);
+        // console.log('fetch res.data', fetchSuccess(res.data));
       })
       .catch(err => {
         dispatch(fetchError(err.message || true));
@@ -54,6 +39,9 @@ export const fetchChangeStatus = (tableId, newStatus) => {
 };
 
 export default function reducer(statePart = [], action = {}) {
+  // console.log('statePart', statePart);
+  // console.log('action', action);
+
   switch (action.type) {
     case FETCH_START: {
       return {
@@ -81,16 +69,6 @@ export default function reducer(statePart = [], action = {}) {
           active: false,
           error: action.payload,
         },
-      };
-    }
-    case FETCH_STATUS: {
-      return {
-        ...statePart,
-        loading: {
-          active: false,
-          error: false,
-        },
-        data: statePart.data.map(data => data.id === action.payload.id ? {...data, status: action.payload.status} : data),
       };
     }
     default:

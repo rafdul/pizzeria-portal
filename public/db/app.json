@@ -255,18 +255,6 @@
       "starters": ["lemonWater"]
     }
   ],
-  "booking": [
-    {
-      "id": 1,
-      "date": "2020-11-14",
-      "hour": "18:00",
-      "table": 1,
-      "repeat": "daily",
-      "duration": 2,
-      "ppl": 3,
-      "starters": ["lemonWater"]
-    }
-  ],
   "tables": [
     {"id": "1", "status": "free", "order": null},
     {"id": "2", "status": "thinking", "order": null},
@@ -274,5 +262,31 @@
     {"id": "4", "status": "prepared", "order": 234},
     {"id": "5", "status": "delivered", "order": 345},
     {"id": "6", "status": "paid", "order": 456}
+  ],
+  "bookedTable": [
+    {"id": "1", "time": "12:00-12:29", "table1": "b1aa", "table2": null, "table3": null, "event": null},
+    {"id": "2", "time": "12.30-12.59", "table1": null, "table2": "b2aa", "table3": null, "event": null},
+    {"id": "3", "time": "13.00-13.29", "table1": null, "table2": "b2bb", "table3": "b3cc", "event": "e11"},
+    {"id": "4", "time": "13.30-13.59", "table1": "b1a2", "table2": null, "table3": null, "event": "e11"},
+    {"id": "5", "time": "14.00-14.29", "table1": "b1b2", "table2": null, "table3": null, "event": "e11"},
+    {"id": "6", "time": "14.30-14.59", "table1": "b133", "table2": null, "table3": null, "event": null},
+    {"id": "7", "time": "15.00-15.29", "table1": null, "table2": "b2ac", "table3": null, "event": null},
+    {"id": "8", "time": "15.30-15.59", "table1": null, "table2": "b2ad", "table3": "b3cd", "event": null},
+    {"id": "9", "time": "16.00-16.29", "table1": null, "table2": null, "table3": "b3ce", "event": null},
+    {"id": "10", "time": "16.30-16.59", "table1": "b13a", "table2": null, "table3": null, "event": null},
+    {"id": "11", "time": "17.00-17.29", "table1": "b1d3", "table2": null, "table3": null, "event": null},
+    {"id": "12", "time": "17.30-17.59", "table1": "b13e", "table2": "b2ae", "table3": null, "event": null},
+    {"id": "13", "time": "18.00-18.29", "table1": "b1a4", "table2": null, "table3": null, "event": null},
+    {"id": "14", "time": "18.30-18.59", "table1": null, "table2": null, "table3": "b3cf", "event": null},
+    {"id": "15", "time": "19.00-19.29", "table1": null, "table2": "b2af", "table3": null, "event": "e12"},
+    {"id": "16", "time": "19.30-19.59", "table1": "b1b4", "table2": "b2bc", "table3": "b3dd", "event": "e12"},
+    {"id": "17", "time": "20.00-20.29", "table1": null, "table2": null, "table3": null, "event": "e12"},
+    {"id": "18", "time": "20.30-20.59", "table1": "b1c4", "table2": null, "table3": null, "event": "e12"},
+    {"id": "19", "time": "21.00-21.29", "table1": "b1d4", "table2": "b2cc", "table3": "b3de", "event": null},
+    {"id": "20", "time": "21.30-21.59", "table1": "b1e4", "table2": "b2dc", "table3": "b3df", "event": null},
+    {"id": "21", "time": "22.00-22.29", "table1": "b1f4", "table2": null, "table3": null, "event": null},
+    {"id": "22", "time": "22.30", "table1": null, "table2": null, "table3": "b3dg", "event": null},
+    {"id": "23", "time": "23.00", "table1": null, "table2": null, "table3": "b3dh", "event": null},
+    {"id": "24", "time": "23.30", "table1": null, "table2": "b2ec", "table3": null, "event": null}
   ]
 }

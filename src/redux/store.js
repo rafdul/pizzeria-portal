@@ -2,6 +2,7 @@ import {combineReducers, createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import tablesReducer from './tablesRedux';
+import bookedTableReducer from './bookedTable';
 
 // define initial state and shallow-merge initial data
 const initialState = {
@@ -12,11 +13,19 @@ const initialState = {
       error: false,
     }, //loading zawiera informacje o wczytywaniu danych – active mówi nam, czy trwa wczytywanie, a error będzie zawierał ew. komunikat o błędzie
   },
+  bookedTable: {
+    data: {}, //tablica rezerwacji i eventów z API
+    loading: {
+      active: false,
+      error: false,
+    },
+  },
 };
 
 // define reducers
 const reducers = {
   tables: tablesReducer,
+  bookedTable: bookedTableReducer,
 };
 
 // add blank reducers for initial state properties without reducers

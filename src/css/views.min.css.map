@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,AAAC,CACT,OAAO,CCHG,IAAI,CDIf,AAED,AAAA,IAAI,AAAC,CACH,UAAU,CAAE,IAAI,CACjB,AAED,AAAA,MAAM,AAAC,CACL,OAAO,CAAE,MAAM,CACf,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,GAAG,CACjB,AAED,AAAA,MAAM,AAAC,CACL,OAAO,CAAE,cAAc,CACxB,AAED,AAAA,UAAU,AAAC,CACT,MAAM,CAAE,KAAK,CACb,cAAc,CAAE,IAAI,CACrB,AAED,AAAA,OAAO,AAAC,CACN,OAAO,CAAE,GAAG,CACb",
+    "sources": [
+        "../styles/views.scss",
+        "../styles/settings.scss"
+    ],
+    "names": [],
+    "file": "views.min.css"
+}

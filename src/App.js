@@ -6,7 +6,7 @@ import store from './redux/store';
 import MainLayout from './components/layout/MainLayout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
 import Login from './components/views/Login/Login';
-import Tables from './components/views/Tables/Tables';
+import Tables from './components/views/Tables/TablesContainer';
 import BookingDetails from './components/views/BookingDetails/BookingDetails';
 import BookingNew from './components/views/BookingNew/BookingNew';
 import EventsDetails from './components/views/EventsDetails/EventsDetails';

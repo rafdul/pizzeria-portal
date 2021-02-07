@@ -52,8 +52,8 @@ class Ordering extends React.Component {
       case 'free':
         return (
           <>
-            <Button onClick={() => fetchChangeStatus(id, 'thinking')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/new`}>thinking</Button>
-            <Button onClick={() => fetchChangeStatus(id, 'ordered')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/new`} variant='outlined' color='secondary'>new order</Button>
+            <Button onClick={() => fetchChangeStatus(id, 'thinking')} >thinking</Button>
+            {/* <Button onClick={() => fetchChangeStatus(id, 'ordered')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/new`} variant='outlined' color='secondary'>new order</Button> */}
           </>
         );
       case 'thinking':
@@ -62,19 +62,19 @@ class Ordering extends React.Component {
         );
       case 'ordered':
         return (
-          <Button onClick={() => fetchChangeStatus(id, 'prepared')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/order/999`}>prepared</Button>
+          <Button onClick={() => fetchChangeStatus(id, 'prepared')} >prepared</Button>
         );
       case 'prepared':
         return (
-          <Button onClick={() => fetchChangeStatus(id, 'delivered')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/order/999`}>delivered</Button>
+          <Button onClick={() => fetchChangeStatus(id, 'delivered')} >delivered</Button>
         );
       case 'delivered':
         return (
-          <Button onClick={() => fetchChangeStatus(id, 'paid')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/order/999`}>paid</Button>
+          <Button onClick={() => fetchChangeStatus(id, 'paid')} >paid</Button>
         );
       case 'paid':
         return (
-          <Button onClick={() => fetchChangeStatus(id, 'free')} component={Link} to={`${process.env.PUBLIC_URL}/ordering/order/999`}>free</Button>
+          <Button onClick={() => fetchChangeStatus(id, 'free')} >free</Button>
         );
       default:
         return null;
@@ -83,6 +83,7 @@ class Ordering extends React.Component {
 
   render() {
     const { loading: { active, error }, tables } = this.props;
+    console.log('tables', tables);
 
     if(active || !tables.length) {
       return (
