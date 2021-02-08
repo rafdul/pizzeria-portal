@@ -11,6 +11,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import styles from './Kitchen.module.scss';
 
@@ -64,7 +65,10 @@ class Kitchen extends React.Component {
           <CssBaseline />
           <Grid item xs={12} className={styles.box}>
             <Paper className={styles.paper} elevation={6}>
-              <p>Loading...</p>
+              <div className={styles.progress}>
+                <CircularProgress color="secondary" />
+              </div>
+              {/* <p>Loading...</p> */}
             </Paper>
           </Grid>
         </Grid>

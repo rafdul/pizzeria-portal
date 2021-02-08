@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchOrder: () => dispatch(fetchFromAPI()),
+  // fetchOrder: () => setTimeout(() => dispatch(fetchFromAPI()), 3000),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Kitchen);
